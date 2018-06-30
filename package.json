@@ -1,0 +1,22 @@
+{
+  "name": "upgency-php",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge-barroso/Upgency-PHP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorge-barroso/Upgency-PHP/issues"
+  },
+  "homepage": "https://github.com/jorge-barroso/Upgency-PHP#readme"
+}
