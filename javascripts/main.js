@@ -6,7 +6,7 @@ const $section_1 = $("#section_1");
 const $section_2 = $("#section_2");
 const $section_3 = $("#section_3");
 const $section_4 = $("#section_4");
-const $section_6 = $("#section_6");
+const $section_5 = $("#section_5");
 
 const $first = $("#first");
 const $second = $("#second");
@@ -17,6 +17,16 @@ const $fifth = $("#fifth");
 const form = $("#contact-form");
 const submit = $("#submit");
 const snackbar = $("#snackbar");
+
+const navbar = $('#navbar');
+
+var slideIndex = 1;
+const slides = $('.slides');
+const maxSlidesIndex = slides.length-1;
+const next = $('.next');
+const prev = $('.prev');
+
+//var scrollPos = window.pageYOffset;
 
 $first.click(function(){
 	scroll($section_1);
@@ -31,7 +41,7 @@ $fourth.click(function(){
 	scroll($section_4);
 });
 $fifth.click(function(){
-	scroll($section_6);
+	scroll($section_5);
 });
 
 function scroll(element) {
@@ -54,3 +64,36 @@ submit.click(function() {
 		}, 3000);
 	});
 });
+
+next.click(function() {
+	if(slideIndex==maxSlidesIndex)
+		slideIndex = 0;
+	else
+		++slideIndex;
+
+	showSlide(slideIndex);
+});
+
+prev.click(function() {
+	if(slideIndex==0)
+		slideIndex = maxSlidesIndex;
+	else
+		--slideIndex;
+
+	showSlide(slideIndex);
+});
+
+function showSlide(index) {
+	for(var i=0; i<=maxSlidesIndex; ++i)
+	{
+		slides[i].classList.add("hidden");
+	}
+	slides[index].classList.remove("hidden");
+}
+/*window.onscroll = function() {
+	let currentScrollPos = window.pageYOffset;
+
+	navbar.css("top", currentScrollPos > scrollPos ? "-200px" : "0px");
+
+	scrollPos = currentScrollPos;
+}*/
