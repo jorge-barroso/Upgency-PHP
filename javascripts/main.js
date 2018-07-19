@@ -8,6 +8,8 @@ const $section_3 = $("#section_3");
 const $section_4 = $("#section_4");
 const $section_5 = $("#section_5");
 
+const $sect3_tocontact = $('#sect3_tocontact');
+
 const $first = $("#first");
 const $second = $("#second");
 const $third = $("#third");
@@ -41,6 +43,9 @@ $fourth.click(function(){
 	scroll($section_4);
 });
 $fifth.click(function(){
+	scroll($section_5);
+});
+$sect3_tocontact.click(function() {
 	scroll($section_5);
 });
 

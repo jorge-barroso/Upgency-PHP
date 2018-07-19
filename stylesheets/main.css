@@ -26,6 +26,10 @@ ul li {
     max-width: 17vh;
 }
 
+a > img {
+    text-decoration: none;
+}
+
 @media(min-width: 768px) {
     .parallax  {
         background-attachment: fixed;
@@ -115,6 +119,10 @@ p.huge {
     font: bold calc(5vw + 1em)/0.9em raleway, sans-serif;
 }
 
+p.medium {
+    font: calc(1vw + 1em)/0.9em raleway, sans-serif;
+}
+
 div.header {
     margin-bottom: 5em;
     width: 67%;
@@ -156,6 +164,20 @@ hr.sline.purple {
     margin-top: 6%
 }
 
+.impact {
+    font: 18px/0.9 Impact;
+    color: #000000;
+}
+
+p.nimbus {
+    font-family: Nimbus Sans;
+    font-size: calc(.1vw + 1em);
+}
+
+.section_footer {
+    margin: 8vh 0 2vh 0;
+}
+
 div.row {
     margin-left: 0;
     margin-right: 0;
@@ -192,7 +214,7 @@ div.center-flex{
 
 .slideshow-container {
     position: relative;
-    margin: auto;
+    margin: 8vh auto;
     max-width: 75%;
     height: 50vh;
     overflow: hidden;
@@ -281,6 +303,16 @@ div.center-flex{
     overflow: auto;
 }
 
+#media_icons {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3vh;
+}
+
+#about_div p {
+    margin-bottom: 3vh;
+}
+
 #form-div {
     width: 60%;
     float: left;
@@ -297,7 +329,7 @@ div.center-flex{
 }
 
 #contact-div p {
-    letter-spacing: 0.1em;
+    line-height: 1.4em;
 }
 
 #name {
