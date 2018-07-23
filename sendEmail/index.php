@@ -23,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $args['head_line'] = $first_line;
     $args['message'] = $_POST['message'];
     $args['email'] = $_POST['email'];
-    $email = getEmail("contact_email.html", $args);
+    var_dump($args);
+    $email = getEmail("./contact_email.html", $args);
 
     try {
         $mail = new PHPMailer();
@@ -37,13 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Password = "asandwichisbetter";
 
         $mail->setFrom("contactus@upgency.com", "Contact Requests");
+        $mail->addAddress("hello@upgency.com", "Upgency Contact");
 
         $mail->isHTML(true);
 
         $mail->Subject = $subject;
         $mail->Body = $email;
 
-        $mail->send();
+        if(!$mail->send())
+            var_dump($mail->ErrorInfo);
         echo 'Message has been sent';
     } catch(Exception $e) {
         echo "Message could not be sent. Mailer Error: ", $mail->ErrorInfo;
