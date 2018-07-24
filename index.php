@@ -228,19 +228,6 @@
                 <p class="huge altfont">CONTACT US!</p>
             </div>
             <div>
-                <div id="form-div">
-                    <form id="contact-form" action="/" method="post">
-                        <div>
-                            <div>
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Name *" required="required" />
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" />
-                            </div>
-                            <input class="form-control" id="company" name="company" type="text" placeholder="Company Name" />
-                            <textarea class="form-control" id="message" name="message" cols="30" rows="10" placeholder="Tell us about your needs..."></textarea>
-                            <button class="btn" id="submit" type="button">Send</button>
-                        </div>
-                    </form>
-                </div>
                 <div id="contact-div">
                     <p class="altfont">
                         <strong>ASK FOR YOUR QUOTE NOW!</strong>
@@ -262,6 +249,19 @@
                             <a class="altfont" href="tel:+441785213302"> (+44) 01785 213302</a>
                         </strong>
                     </p>
+                </div>
+                <div id="form-div">
+                    <form id="contact-form" action="/" method="post">
+                        <div>
+                            <div>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Name *" required="required" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" />
+                            </div>
+                            <input class="form-control" id="company" name="company" type="text" placeholder="Company Name" />
+                            <textarea class="form-control" id="message" name="message" cols="30" rows="10" placeholder="Tell us about your needs..."></textarea>
+                            <button class="btn" id="submit" type="button">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
