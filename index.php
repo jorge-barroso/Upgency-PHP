@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="twitter:card" content="summary"></meta>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Upgency_UK" />
+    <meta property="og:url" content="https://www.upgency.com/" />
+    <meta property="og:title" content="Upgency" />
+    <meta property="og:description" content="We are a Digital Experience company that can provide everything you need for your Digital Campaign &amp; Brand - Contact us &amp; let's make your business grow!" />
+    <meta property="og:image" content="https://www.upgency.com/images/logo.png" />
     <title>Upgency</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.min.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous" async>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" async>
     <script src="/javascripts/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <!--script(src="/javascripts/stellar.min.js")-->
@@ -74,7 +80,7 @@
                         <div class="large separate">
                             <hr class="sline purple" />
                         </div>
-                        <p>DIGITAL MARKETING</p>
+                        <p class="nomargin">DIGITAL</p><p>MARKETING</p>
                         <img class="services_img" src="/images/digital_marketing.png" alt="Illustration of a Mobile Phone Representing Google Mobile First Index"/>
                     </div>
                 </div>
@@ -117,52 +123,16 @@
                 <div class="header">
                     <p class="huge altfont">DIGITAL MARKETING</p>
                 </div>
-                <div class="row flex-middle">
-                    <strong class="flex-left altfont">ORGANIC SEARCH</strong>
-                    <img class="flex-right" src="/images/organic_search.png" alt="Illustration of a graph representing Organic Search (SEO) Growth"/>
-                </div>
-                <p class="altfont nimbus">
-                    <strong class="purplefont">Upgency</strong> provides services such as full website analysis - Opportunity Analysis - Competitor
-                    Analysis - Monitoring Search Performance - Keyword Research - Seasonality Analysis - Local SEO Optimisation
-                    – Metadata, Content Recommendations and much more,
-                    <a href="#" id="sect3_tocontact"><strong class="purplefont">click here to start pushing your business UP today!</strong></a>
-                </p>
-                <div class="row flex-middle">
-                    <img class="flex-left" src="/images/social_media.png" alt="Illustration of a liked post representing Social Media Growth"/>
-                    <strong class="flex-right altfont">SOCIAL MEDIA ORGANIC OPTIMISATION</strong>
-                </div>
-                <p class="altfont nimbus">
-                    <strong class="purplefont">Upgency</strong> will provide a full social media channels audit - Opportunity Analysis - Competitor
-                    Analysis - Monitoring Performance - A/B Testing to find optimal posting times and outreach - Optimisation
-                    of YouTube videos following YouTube best practice and much more using the main Social Media Channels
-                    such as Facebook, Twitter, Instagram, YouTube.
-                    <strong>Get UP</strong> there in Google rankings whilst remaining social and the talk of the town! Plus of course
-                    measuring, tracking and reporting on your website comes as standard on all packages.
-                    <strong class="purplefont">Start now!</strong>
-                </p>
-                <div class="row flex-middle">
-                    <strong class="flex-left altfont">CONTENT AND BLOG RECOMMENDATIONS</strong>
-                    <img class="flex-right" src="/images/context_recom.png" alt="Illustration of a Message writing text representing Content and Blog Production"/>
-                </div>
-                <p class="altfont nimbus">
-                    <strong class="purplefont">Upgency</strong> can help also the clients who like to think a little bigger and want to push to the
-                    next level of their campaign visibility by - Planning engaging Content Strategies - Executing a Content
-                    Calendar Plan - Providing Content Recommendations Content Distribution and Backlink Strategy and much
-                    more whilst encompassing SEO best practice,
-                    <strong>NO TEMPLATES, AVOIDING PENALISATION</strong> and of course achieving the best results!
-                    <strong class="purplefont">Get in touch today!</strong>
-                </p>
-                <div class="row flex-middle">
-                    <img class="flex-left" src="/images/paid_social.png" alt="Illustration of a pie chart representing growth in Digital Visibility"/>
-                    <strong class="flex-right altfont">PAID SOCIAL/SEARCH</strong>
-                </div>
-                <p class="altfont nimbus">
-                    <strong class="purplefont">Upgency</strong> caters for all campaigns, using methods that include - Paid Social Strategies adaptable
-                    for
-                    <strong class="purplefont">any potential clients budget looking to expand or build their business or project.</strong> We can do
-                    this also by creating online banner adverts and paid search strategies, again adaptable to the client’s
-                    budget.
-                </p>
+
+                <?php
+                    require_once 'lib/Mobile_Detect.php';
+                    $detect = new Mobile_Detect;
+
+                    if($detect->isMobile() || $detect->isTable())
+                        readfile("templates/dm-mobile.html");
+                    else
+                        readfile("templates/dm-pc.html");
+                ?>
                 <p class="impact inline-center section_footer">- Get in touch with <font class="purplefont">Upgency</font> today and watch your business grow! -</p>
             </div>
         </div>
@@ -228,19 +198,6 @@
                 <p class="huge altfont">CONTACT US!</p>
             </div>
             <div>
-                <div id="form-div">
-                    <form id="contact-form" action="/" method="post">
-                        <div>
-                            <div>
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Name *" required="required" />
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" />
-                            </div>
-                            <input class="form-control" id="company" name="company" type="text" placeholder="Company Name" />
-                            <textarea class="form-control" id="message" name="message" cols="30" rows="10" placeholder="Tell us about your needs..."></textarea>
-                            <button class="btn" id="submit" type="button">Send</button>
-                        </div>
-                    </form>
-                </div>
                 <div id="contact-div">
                     <p class="altfont">
                         <strong>ASK FOR YOUR QUOTE NOW!</strong>
@@ -262,6 +219,19 @@
                             <a class="altfont" href="tel:+441785213302"> (+44) 01785 213302</a>
                         </strong>
                     </p>
+                </div>
+                <div id="form-div">
+                    <form id="contact-form" action="/" method="post">
+                        <div>
+                            <div>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Name *" required="required" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" />
+                            </div>
+                            <input class="form-control" id="company" name="company" type="text" placeholder="Company Name" />
+                            <textarea class="form-control" id="message" name="message" cols="30" rows="10" placeholder="Tell us about your needs..."></textarea>
+                            <button class="btn" id="submit" type="button">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -302,5 +272,27 @@
     <div id="snackbar"></div>
     <script src="/javascripts/main.min.js"></script>
 </body>
-
+    <script type='application/ld+json'> 
+        {
+            "@context": "http://www.schema.org",
+            "@type": "LocalBusiness",
+            "name": "Upgency",
+            "url": "https://www.upgency.com",
+            "logo": "https://www.upgency.com/images/logo.png",
+            "image": "https://www.upgency.com/images/logo.png",
+            "description": "We are a Digital Experience company that can provide everything you need for your Digital Campaign & Brand - Contact us & let's make your business grow!",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Stafford",
+                "addressCountry": "United Kingdom"
+            },
+            "openingHours": "Mo, Tu, We, Th, Fr 09:00-18:00",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "telephone": "+44 01785213302",
+                "email": "hello@upgency.com"
+            }
+        }
+    </script>
 </html>

@@ -133,11 +133,19 @@ p.middle {
     font: bold calc(2vh + 1em)/0.9em raleway, sans-serif
 }
 
+p.justify {
+    text-align: justify;
+}
+
 .altfont {
     color: #1B1B1E !important;
 }
 .purplefont {
     color: #9E60C4;
+}
+
+.nomargin {
+    margin: 0;
 }
 
 hr#main-hr {
@@ -196,6 +204,10 @@ div.center-flex{
     text-align: center;
 }
 
+.margin-center {
+    margin: 0 auto;
+}
+
 .flex-left {
     margin-right: auto;
 }
@@ -208,8 +220,16 @@ div.center-flex{
     align-items: center;
 }
 
+.dm-header{
+    line-height: 3em;
+}
+
 .hidden {
     display: none;
+}
+
+.d-grid {
+    display: grid;
 }
 
 .slideshow-container {
